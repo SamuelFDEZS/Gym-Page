@@ -1,0 +1,45 @@
+@mixin desktop() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet($width) {
+  @media (max-width: 768px) {
+    width: $width;
+    @content;
+  }
+}
+
+
+@mixin boxModel($width, $height) {
+  width: $width;
+  height: $height;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  @content;
+}
+
+@mixin sectionBox($width, $height) {
+  transform-style: preserve-3d;
+  width: $width;
+  height: $height;
+  position: relative;
+  display: flex;
+  color: white;
+  @content;
+}
+
+@mixin articleImage($url, $bsize, $bx, $by, $bcolor, $margin){
+  background-image: $url;
+        background-size: $bsize;
+        background-repeat: no-repeat;
+        background-position: $bx $by;
+        background-color: $bcolor;
+        margin-top: $margin;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        @content;
+      }

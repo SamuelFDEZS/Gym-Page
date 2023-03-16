@@ -1,0 +1,822 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 100%;
+  height: 20vh;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  z-index: 1;
+  position: fixed;
+}
+.header_h1 {
+  align-self: center;
+  font-size: 3em;
+}
+.header_section {
+  width: 40%;
+  height: 100%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header_nav {
+  width: 23%;
+  height: 100%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  display: none;
+  position: absolute;
+  right: 4%;
+  top: 70%;
+  border: 3px solid black;
+  color: black;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header_nav {
+    width: 40%;
+    height: 60%;
+    font-family: "Oleo Script Swash Caps", cursive;
+    font-family: "Rubik Moonrocks", cursive;
+    font-family: "Tilt Warp", cursive;
+    align-self: center;
+    position: static;
+    display: block;
+    border-left: 2px solid white;
+  }
+}
+.header_nav_ul {
+  width: 100%;
+  height: 100%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header_nav_ul {
+    display: flex;
+  }
+}
+.header_nav_ul li {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 25%;
+  font-family: "Roboto", sans-serif;
+}
+.header_input {
+  width: 8%;
+  height: 25%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  position: absolute;
+  align-self: center;
+  border: 2px solid black;
+  right: 5%;
+  opacity: 0;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .header_input {
+    display: none;
+  }
+}
+
+.hamburguer {
+  width: 8%;
+  height: 25%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  align-self: center;
+  border: 2px solid black;
+  margin-right: 5%;
+}
+@media (min-width: 768px) {
+  .hamburguer {
+    display: none;
+  }
+}
+
+.header_nav_ul li:hover {
+  display: block;
+}
+
+.barras {
+  width: 100%;
+  height: 30%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  font-size: 3em;
+}
+
+.barra1 {
+  border-top: 2px solid white;
+  margin-top: 8%;
+}
+
+.barra2 {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+input:checked ~ nav {
+  display: block;
+}
+
+.hline {
+  width: 80%;
+  height: 20%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  text-align: center;
+  border-top: 2px solid white;
+}
+
+.over-hline {
+  width: 90%;
+  height: 20%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 123, 0);
+  padding: 9%;
+  margin-bottom: 5%;
+}
+@media (min-width: 768px) {
+  .over-hline {
+    margin-bottom: 1%;
+    padding: 5%;
+  }
+}
+
+.over-hline:hover {
+  background-color: rgb(190, 92, 1);
+  cursor: pointer;
+}
+
+.over-hline a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  width: 100%;
+  height: 500vh;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+@media (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.main_section {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 33%;
+  position: relative;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main_section_h1 {
+  width: 100%;
+  align-self: flex-start;
+  margin-top: 5%;
+  font-size: 3em;
+  text-align: center;
+  font-weight: 400;
+}
+.main_section_h2 {
+  width: 100%;
+  align-self: flex-start;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+.main_section_div {
+  width: 100%;
+  height: 80%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_section_article {
+  width: 25%;
+  height: 95%;
+  background-color: white;
+  margin: 1% 1% 0% 1%;
+  border-radius: 2%;
+  box-shadow: 1px 3px 2px rgb(185, 185, 185);
+  padding: 1% 3% 1% 1%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+}
+@media (min-width: 768px) {
+  .main_section_article {
+    width: 25%;
+    height: 80%;
+    box-shadow: 3px 4px 10px rgb(185, 185, 185);
+  }
+}
+.main_section_article img {
+  display: block;
+  width: 40%;
+  height: 17%;
+}
+.main_section_article h3 {
+  margin-top: 2%;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .main_section_article h3 {
+    font-size: 1.5em;
+    margin-top: 10%;
+  }
+}
+.main_section_article p {
+  width: 100%;
+  height: 48%;
+  margin-top: 2%;
+  font-weight: 200;
+  font-size: 0.6em;
+  text-align: center;
+  color: black;
+}
+@media (min-width: 768px) {
+  .main_section_article p {
+    width: 60%;
+    font-size: 1.3em;
+    font-family: roboto;
+    word-spacing: 5px;
+    margin-top: 10%;
+  }
+}
+.main_section_articleImage {
+  width: 70%;
+  height: 60%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Gym-PNG-File.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 20% 10%;
+  background-color: rgb(0, 252, 231);
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border: 3px solid black;
+}
+.main_section_footer {
+  width: 100%;
+  height: 20%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_section_footer span {
+  font-family: "Roboto", sans-serif;
+}
+.main_section_footer div {
+  width: 50%;
+  height: 40%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(216, 185, 245);
+  font-size: 1.2em;
+  margin-top: 2%;
+}
+.main_section_footer p {
+  margin-top: 5%;
+  font-size: 2em;
+}
+
+.main_section_articleImage2 {
+  width: 95%;
+  height: 120vh;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  background-image: url("https://www.pngitem.com/pimgs/m/516-5160882_trainer-big3-personas-en-gimnasio-png-transparent-png.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 20% 10%;
+  background-color: rgb(241, 89, 0);
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border: 3px solid black;
+}
+
+.section1 {
+  height: 15%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdn.static.aptavs.com/imagenes/ejercicios-basicos-de-gimnasio-cuales-son-y-su-importancia/ejercicios-basicos-de-gimnasio_905x603.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  margin-top: 24%;
+}
+@media (min-width: 768px) {
+  .section1 {
+    width: 100%;
+    margin-top: 9%;
+    height: 25%;
+  }
+}
+
+.section2 {
+  background-color: white;
+  height: 25%;
+  z-index: -1;
+  color: black;
+}
+@media (min-width: 768px) {
+  .section2 {
+    width: 45%;
+  }
+}
+
+.main_section2_h2 {
+  width: 60%;
+  height: 5%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  color: black;
+  font-family: "Tilt Warp", cursive;
+  font-size: 1.8em;
+  margin-top: 5%;
+}
+@media (min-width: 768px) {
+  .main_section2_h2 {
+    font-size: 4em;
+  }
+}
+
+.main_section2_h1 {
+  width: 50%;
+  height: 5%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-size: 2em;
+  color: rgb(255, 115, 0);
+}
+@media (min-width: 768px) {
+  .main_section2_h1 {
+    margin-top: 2%;
+    font-size: 5em;
+  }
+}
+
+.articleImage_h3 {
+  width: 60%;
+  height: 7%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  text-align: center;
+  font-size: 1.5em;
+  color: aqua;
+}
+@media (min-width: 768px) {
+  .articleImage_h3 {
+    font-size: 3em;
+  }
+}
+
+.articleImage2_h3 {
+  color: rgb(255, 123, 0);
+}
+@media (min-width: 768px) {
+  .articleImage2_h3 {
+    font-size: 3em;
+  }
+}
+
+.articleImage_h4 {
+  width: 58%;
+  height: 7%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  text-align: center;
+  font-size: 1.3em;
+}
+@media (min-width: 768px) {
+  .articleImage_h4 {
+    font-size: 2em;
+    margin-top: 4%;
+  }
+}
+
+.articleImage_div {
+  width: 90%;
+  height: 70%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  background-color: white;
+  box-shadow: 1px 3px 2px rgb(185, 185, 185);
+  z-index: 4;
+  padding-left: 2%;
+}
+.articleImage_div_div {
+  width: 100%;
+  height: 10%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  background-color: rgb(44, 44, 44);
+}
+.articleImage_div_p {
+  font-family: "Roboto", sans-serif;
+  margin-top: 8%;
+}
+
+.section3 {
+  color: black;
+}
+@media (min-width: 768px) {
+  .section3 {
+    width: 45%;
+  }
+}
+
+.section4_h1 {
+  margin-left: 10%;
+  margin-top: 20%;
+  align-self: baseline;
+  color: black;
+  font-size: 14em;
+  font-family: "Titan One", cursive;
+  color: rgb(255, 123, 0);
+}
+.section4_h1-2 {
+  margin-left: 10%;
+  align-self: baseline;
+  color: black;
+  font-size: 7em;
+  font-family: "Bungee Shade", cursive;
+  color: aqua;
+}
+
+.article1,
+.article2,
+.article3 {
+  align-self: flex-start;
+}
+
+@media (min-width: 768px) {
+  .article2 {
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .article3 {
+    margin-top: 10%;
+  }
+}
+
+.precio {
+  font-size: 1.8em;
+  margin-top: 4%;
+}
+
+/*Valores ordenador
+
+&_section {
+    .main {
+  @include boxModel(100%, 500vh) {
+    border: 3px solid black;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  &_section {
+    @include sectionBox(100%, 33%) {
+      align-items: center;
+      border: 5px solid blue;
+      flex-direction: column;
+      align-items: center;
+    }
+    &_h1 {
+      width: 100%;
+      align-self: flex-start;
+      margin-top: 5%;
+      font-size: 3em;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    &_h2 {
+      width: 100%;
+      align-self: flex-start;
+      text-align: center;
+      margin-top: 2%;
+      font-size: 1.5em;
+    }
+
+    &_div {
+      @include boxModel(100%, 80%) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &_article {
+      width: 25%;
+      height: 25%;
+      background-color: white;
+      margin: 0% 1% 0% 1%;
+      border-radius: 2%;
+      box-shadow: 2px 5px 4px rgb(185, 185, 185);
+      padding: 1% 3% 1% 1%;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &_article img {
+      display: block;
+      width: 25%;
+      height: 30%;
+    }
+
+    &_article h3 {
+      margin-top: 2%;
+      font-weight: 300;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    &_article p {
+      width: 100%;
+      height: 48%;
+      margin-top: 2%;
+      font-weight: 200;
+      font-size: 0.6em;
+      text-align: center;
+    }
+  }
+}
+
+//Backgrounds
+
+.section1 {
+  height: 15%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://cdn.static.aptavs.com/imagenes/ejercicios-basicos-de-gimnasio-cuales-son-y-su-importancia/ejercicios-basicos-de-gimnasio_905x603.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+.section2 {
+  background-color: white;
+  height: 40%;
+  z-index: -1;
+}
+
+.section3 {
+    background-color: black;
+  z-index: -2;
+}
+
+//Aeticulos section1
+.article1 {
+  align-self: flex-start;
+}
+
+.article2 {
+}
+
+.article3 {
+  margin-top: 10%;
+}
+
+  */
+.footer {
+  width: 100%;
+  height: 70vh;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.footer_h1 {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 90%;
+  border-right: 1px solid white;
+}
+.footer_nav {
+  width: 60%;
+  height: 100%;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Rubik Moonrocks", cursive;
+  font-family: "Tilt Warp", cursive;
+  display: flex;
+}
+.footer_nav_ul li {
+  margin-top: 12%;
+}
+.footer_nav_ul li a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=main.css.map */
